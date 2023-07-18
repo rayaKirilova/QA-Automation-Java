@@ -1,5 +1,6 @@
 package org.example;
 
+import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Wait;
 
@@ -21,13 +22,13 @@ public class FluentWait {
         }
     }
 
-    public String basicFluentWait() {
-        Wait<WebDriver> wait = new FluentWait<>(webDriver)
+    // Add possible real life examples in the code, currently not used!
+  /* public String basicFluentWait() {
+        Wait<WebDriver> wait = new FluentWait(webDriver)
                 .withTimeout(Duration.ofSeconds(secondsToWait))
                 .pollingEvery(Duration.ofSeconds(pollingIntervals))
-                .ignoring(Exception.class) ;
+                .ignoring(InvalidArgumentException.class) ;
 
         return "Result" ;
-    }
-
+    }*/
 }
